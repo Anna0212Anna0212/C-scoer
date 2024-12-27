@@ -4,6 +4,8 @@ using namespace std;
 
 int main()
 {
+    int a=0;
+    int b=0;
     int i ;
     cin>>i;
     int sco[i];
@@ -17,8 +19,22 @@ int main()
             }
         }
     }
-    for (int j = 0;j<i;j++){
-        cout<<(sco[j]);
-        cout<<" ";
+    int num60=0;
+    int num61=60;
+    for(int j=0;j<i;j++){
+        if(sco[j]>=60){
+            num61=sco[j];
+            a=1;
+        }
+        if(sco[j]<60){
+            num60=sco[j];
+            b=1;
+        }
     }
+    if(a==1){cout<<num60<<endl;}
+    else{cout<<"worst case";}
+    if(b==1){cout<<num61<<endl;}
+    else{cout<<"good case";}
 }
+
+

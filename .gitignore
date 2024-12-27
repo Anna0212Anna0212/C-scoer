@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int i ;
+    cin>>i;
+    int sco[i];
+    for(int j=0;j<i;j++){
+        cin>>sco[j];
+    }
+    for(int k=0;k<i;k++){
+        for(int l=k+1;l<i;l++){
+            if(sco[k]>sco[l]){
+                swap(sco[k],sco[l]);
+            }
+        }
+    }
+    for (int j = 0;j<i;j++){
+        cout<<(sco[j]);
+        cout<<" ";
+    }
+}
